@@ -1,6 +1,9 @@
 <?php
 namespace Blogger\BlogBundle\Entity;
-
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Length;
 
 class Enquiry
 {
@@ -11,6 +14,22 @@ protected $email;
 protected $subject;
 
 protected $body;
+    /**
+     * @return mixed
+     */
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+        $metadata->addPropertyConstraint('name', new NotBlank());
+        $metadata->addPropertyConstraint('email', new Email());
+        $metadata->addPropertyConstraint('subject',  new Length(array(
+            'max'        => 50
+
+        )));
+        $metadata->addPropertyConstraint('body', new Length(array(
+            'min'        => 50
+        )));
+    }
+
 
 /**
 * @return mixed

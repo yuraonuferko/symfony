@@ -10,6 +10,7 @@ class __TwigTemplate_0241fe4f81d79076dfe041bf3ceef13c4906c4d70ac968dd3234c045fc3
         // line 2
         $this->parent = $this->loadTemplate("::base.html.twig", "BloggerBlogBundle::layout.html.twig", 2);
         $this->blocks = array(
+            'stylesheets' => array($this, 'block_stylesheets'),
             'sidebar' => array($this, 'block_sidebar'),
         );
     }
@@ -21,26 +22,46 @@ class __TwigTemplate_0241fe4f81d79076dfe041bf3ceef13c4906c4d70ac968dd3234c045fc3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b22224acb72b2dcf11f7e63e932e19c3a3440c21e19a1a44888139224d119d91 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b22224acb72b2dcf11f7e63e932e19c3a3440c21e19a1a44888139224d119d91->enter($__internal_b22224acb72b2dcf11f7e63e932e19c3a3440c21e19a1a44888139224d119d91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle::layout.html.twig"));
+        $__internal_8e662d30105e25fa0d0b95df5520caf03affa6328960a6d5b993f9b832d6dcda = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8e662d30105e25fa0d0b95df5520caf03affa6328960a6d5b993f9b832d6dcda->enter($__internal_8e662d30105e25fa0d0b95df5520caf03affa6328960a6d5b993f9b832d6dcda_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BloggerBlogBundle::layout.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b22224acb72b2dcf11f7e63e932e19c3a3440c21e19a1a44888139224d119d91->leave($__internal_b22224acb72b2dcf11f7e63e932e19c3a3440c21e19a1a44888139224d119d91_prof);
+        $__internal_8e662d30105e25fa0d0b95df5520caf03affa6328960a6d5b993f9b832d6dcda->leave($__internal_8e662d30105e25fa0d0b95df5520caf03affa6328960a6d5b993f9b832d6dcda_prof);
 
     }
 
     // line 4
-    public function block_sidebar($context, array $blocks = array())
+    public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_bb7b4797ddea8bb8e9a4a48f9ef5aa31b5eb64973583e3d64239675ab5cc8150 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bb7b4797ddea8bb8e9a4a48f9ef5aa31b5eb64973583e3d64239675ab5cc8150->enter($__internal_bb7b4797ddea8bb8e9a4a48f9ef5aa31b5eb64973583e3d64239675ab5cc8150_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_084296127b4e1b3c557cfbcb7b5478d4af3a2cbc519406d5ad677edea13090e7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_084296127b4e1b3c557cfbcb7b5478d4af3a2cbc519406d5ad677edea13090e7->enter($__internal_084296127b4e1b3c557cfbcb7b5478d4af3a2cbc519406d5ad677edea13090e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+    <link href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/bloggerblog/css/blog.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\" />
+";
+        
+        $__internal_084296127b4e1b3c557cfbcb7b5478d4af3a2cbc519406d5ad677edea13090e7->leave($__internal_084296127b4e1b3c557cfbcb7b5478d4af3a2cbc519406d5ad677edea13090e7_prof);
+
+    }
+
+    // line 9
+    public function block_sidebar($context, array $blocks = array())
+    {
+        $__internal_b4e5677188916b4e7cb79843b0e7a7eea86511dd6cb885a981d1fe5d12c34a4c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b4e5677188916b4e7cb79843b0e7a7eea86511dd6cb885a981d1fe5d12c34a4c->enter($__internal_b4e5677188916b4e7cb79843b0e7a7eea86511dd6cb885a981d1fe5d12c34a4c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+
+        // line 10
         echo "    Sidebar content
 ";
         
-        $__internal_bb7b4797ddea8bb8e9a4a48f9ef5aa31b5eb64973583e3d64239675ab5cc8150->leave($__internal_bb7b4797ddea8bb8e9a4a48f9ef5aa31b5eb64973583e3d64239675ab5cc8150_prof);
+        $__internal_b4e5677188916b4e7cb79843b0e7a7eea86511dd6cb885a981d1fe5d12c34a4c->leave($__internal_b4e5677188916b4e7cb79843b0e7a7eea86511dd6cb885a981d1fe5d12c34a4c_prof);
 
     }
 
@@ -56,7 +77,7 @@ class __TwigTemplate_0241fe4f81d79076dfe041bf3ceef13c4906c4d70ac968dd3234c045fc3
 
     public function getDebugInfo()
     {
-        return array (  40 => 5,  34 => 4,  11 => 2,);
+        return array (  61 => 10,  55 => 9,  46 => 6,  41 => 5,  35 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -72,9 +93,13 @@ class __TwigTemplate_0241fe4f81d79076dfe041bf3ceef13c4906c4d70ac968dd3234c045fc3
         return new Twig_Source("{# src/Blogger/BlogBundle/Resources/views/layout.html.twig #}
 {% extends '::base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href=\"{{ asset('bundles/bloggerblog/css/blog.css') }}\" type=\"text/css\" rel=\"stylesheet\" />
+{% endblock %}
+
 {% block sidebar %}
     Sidebar content
-{% endblock %}
-", "BloggerBlogBundle::layout.html.twig", "C:\\Users\\Onuf.Yur\\Desktop\\OpenServer\\domains\\symfony\\project\\src\\Blogger\\BlogBundle/Resources/views/layout.html.twig");
+{% endblock %}", "BloggerBlogBundle::layout.html.twig", "C:\\Users\\Onuf.Yur\\Desktop\\OpenServer\\domains\\symfony\\project\\src\\Blogger\\BlogBundle/Resources/views/layout.html.twig");
     }
 }
