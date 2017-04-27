@@ -10,8 +10,8 @@ parameters:
     mailer_encryption: ssl
     mailer_auth_mode: login
     mailer_host: smtp.gmail.com
-    mailer_user:
-    mailer_password:
+    mailer_user: yonuferko
+    mailer_password: poroshenko321
     secret: ThisTokenIsNotSoSecretChangeIt
     blogger_blog.emails.contact_email:  yura_onuferko@yahoo.com
 
